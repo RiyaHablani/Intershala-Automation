@@ -1,30 +1,38 @@
-##Internshala Automation
-This project utilizes Puppeteer, Node.js, and JavaScript to automate tasks on Internshala, a popular internship platform. The automation helps in quickly building your resume and applying for internships based on the provided data.
+# Internshala Automation
 
-##Project Overview
-This automation script logs into Internshala using provided credentials, fills out details in the resume sections, saves work samples, and applies for internships. It significantly reduces the time required for these tasks.
+## Overview
 
-##How to Use
-To run the automation script on your machine, follow these steps:
+This project automates tasks on Internshala using Puppeteer, Node.js, and JavaScript. It simplifies resume building and internship applications by filling out details and applying for internships based on provided data.
 
-Clone the Repository: git clone <https://github.com/RiyaHablani/Oral_Cancer_Detection.git>
+## Features
 
-##Install Dependencies:
-Ensure Node.js and npm are installed. Then install Puppeteer:
+- Logs into Internshala with provided credentials.
+- Fills out resume details (graduation, training, work samples) using data from `data.js`.
+- Applies for internships listed in a specific internship fair page.
+- Submits applications with customized answers.
 
-npm install puppeteer
-##Setup Credentials and Data:
-Replace id and pass variables in secret.js with your Internshala login credentials.
-Update data.js with your resume details (e.g., college, degree, training, etc.).
+## How to Use
 
-##Run the Script:
+### Clone the Repository
+
+Clone the repository:
+git clone https://github.com/RiyaHablani/Oral_Cancer_Detection.git
+cd Oral_Cancer_Detection
+
+## Install Dependencies
+Ensure Node.js and npm are installed. Install Puppeteer:
+#### npm install puppeteer
+### Setup Credentials and Data
+Update secret.js:
+
+- Replace id and pass variables with your Internshala login credentials.
+Update data.js:
+
+- Update this file with your resume details (e.g., college, degree, training, etc.).
+Run the Script
 Execute the main script using Node.js:
-node script.js
 
-##Script Explanation
-The main script (script.js) performs the following tasks:
-Launches a headless browser (controlled by Puppeteer).
-Logs into Internshala with provided credentials.
-Fills out resume details (graduation, training, work samples) using data from data.js.
-Applies for internships listed in a specific internship fair page.
-Submits applications with customized answers.
+node script.js
+### Notes
+- Adjust timeouts (setTimeout) based on your network speed and system performance.
+- Ensure all selectors (waitForSelector) match the latest version of Internshala's UI.
